@@ -1,0 +1,618 @@
+@font-face {
+    font-family: 'Bigtime Personal Use';
+    src: url(../fuentes/Bigtime.ttf);
+}
+
+/* PreLoader */
+/* #preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.loader{
+    display: -ms-flexbox;
+    height: 100%;
+    display: flex;
+}
+
+.loader img{
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+} */
+
+*{
+    padding: 0;
+    margin: 0; 
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'Dynalight', cursive;
+    scroll-behavior: smooth;
+}
+
+body{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(fondo/imagen.jpg);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* height: 20em; */
+}
+
+/* Scroll Personalizado */
+body::-webkit-scrollbar {
+	width: 10px;
+	background: rgb(240, 219, 213);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: rgb(217, 164, 148);
+	border-radius: 10px;
+}
+
+/* Reproductor-Musica */
+#play, 
+#pause {
+	float: right;
+}
+
+#play:hover,
+#pause:hover {
+	cursor: pointer;
+}
+#pause {
+	display: none;
+}
+
+/* Titulo y subtitulo */
+.portada{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.portada h1{
+    font-family: 'Bigtime Personal Use';
+    font-size: 120px;
+    display: inline;
+    color: rgb(217, 164, 148);
+}
+
+.portada h2{
+    color: rgb(0, 0, 0);
+    display: inline;
+    font-size: 50px;
+    border-radius: 10px;
+    opacity: 70%;
+}
+
+.portada h3{
+    text-align: center;
+    font-size: 40px;
+    opacity: 70%;
+}
+
+
+/* Fiesta */
+.fiesta{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding: 2px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 420px;
+    width: 370px;
+    opacity: 70%;
+    border-radius: 10px;
+}
+
+.fiesta h3{
+    font-family: 'Bigtime Personal Use';
+    font-size: 50px;
+    color: #000;
+}
+
+.fiesta h4{
+    font-size: 35px;
+    color: #000;
+    padding: 10px;
+}
+
+/* Dress-Code */
+.dress-code{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    height: 300px;
+    width: 370px;
+    opacity: 70%;
+    border-radius: 10px;
+}
+
+.dress-code h3{
+    font-family: 'Bigtime Personal Use';
+    font-size: 50px;
+    color: #000;
+}
+
+.dress-code h4{
+    font-size: 45px;
+    color: #000;
+    padding: 20px;
+}
+
+/* Hashtag */
+.hashtag{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    height: 420px;
+    width: 370px;
+    opacity: 70%;
+    border-radius: 10px;
+}
+
+.hashtag-instagram h4{
+    font-size: 35px;
+    color: #000;
+    padding: 10px;
+}
+
+.hashtag img{
+    width: 180px;
+    height: 90px;
+}
+
+/* Enlace Instagram*/
+.boton{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+    height: 50px;
+    margin-bottom: 20px;
+	background: rgb(217, 164, 148);
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+    color: rgb(0, 0, 0);
+	font-weight: 500;
+    text-decoration: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+/* Regalo */
+.regalo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    height: 370px;
+    width: 370px;
+    opacity: 70%;
+    border-radius: 10px;
+}
+
+.regalo h3{
+    font-family: 'Bigtime Personal Use';
+    font-size: 50px;
+    color: #000;
+}
+
+.regalo h4{
+    padding: 10px;
+    font-size: 35px;
+}
+
+/* Boton modal CBU */
+.boton-modal label{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+    height: 50px;
+    margin-top: 12px;
+	background: rgb(217, 164, 148);
+	color: rgb(255, 255, 255);
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+    transition: all 300ms ease;
+}
+
+/* Ventana modal */
+#btn-modal{
+    display: none;
+}
+
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#btn-modal:checked ~ .container-modal{
+    display: flex;
+}
+
+.content-modal{
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgb(217, 164, 148);
+    border-radius: 5px;
+    position: fixed;
+}
+
+.content-modal h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.content-modal p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 27px;
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.content-modal .btn-cerrar{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-modal .btn-cerrar label{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 7px 10px;
+    font-size: 15px;
+    background-color: rgb(219, 219, 219);
+    color: rgb(82, 82, 82);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.cerrar-modal{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+
+/* Galeria */
+.slick-slide {
+    margin: 0px 10px;
+} 
+
+.slick-slide img {
+    width: 100%;
+    object-fit: cover;
+}
+  
+.container h2{
+    font-size: 80px;
+    text-align: center;
+}
+
+/* Polaroid */
+.imagen{
+    border: 10px solid #fff;
+    border-bottom: 60px solid #fff;
+}
+
+/* Asistencia */
+.asistencia{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    height: 370px;
+    width: 370px;
+    opacity: 70%;
+    border-radius: 10px;
+}
+
+.asistencia h3{
+    font-family: 'Bigtime Personal Use';
+    font-size: 50px;
+    color: #000;
+}
+
+.asistencia h4{
+    padding: 10px;
+    font-size: 35px;
+}
+
+.asistencia img{
+    height: 80px;
+    width: 80px;
+}
+
+/* Enlace Direccion */
+.confirmacion{
+    text-align: center;
+}
+
+/* Te espero */
+.te-espero h2{
+    font-family: 'Bigtime Personal Use';
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+    color: #000;
+}
+
+.te-espero h3{
+    font-family: 'Bigtime Personal Use';
+    font-size: 110px;
+    margin-top: 15px;
+    text-align: center;
+    color: #000;
+}
+
+
+
+/* Responsive */
+@media only screen and (max-width: 768px){
+    body{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(fondo/responsive.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #play, 
+    #pause {
+        position: absolute;
+        z-index: 99;
+    }
+
+    #play:hover,
+    #pause:hover {
+	    cursor: pointer;
+    }
+
+    #pause {
+	    display: none;
+    }
+
+    .portada h1{
+        font-family: 'Bigtime Personal Use';
+        font-size: 60px;
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+        color: rgb(0, 0, 0);
+        
+    }
+
+    .portada h2{
+        font-family: 'Dynalight', cursive;
+        font-size: 35px;
+        position: relative;
+        display: inline-block;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+    }
+
+    .portada h3{
+        font-family: 'Dynalight', cursive;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+    }
+
+    .fiesta{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        height: 420px;
+        width: 250px;
+        opacity: 70%;
+    }
+
+    .fiesta h3{
+        font-family: 'Bigtime Personal Use';
+        font-size: 40px;
+        color: #000;
+    }
+    
+    .fiesta h4{
+        font-size: 30px;
+        padding: 10px;
+        color: #000;
+    }
+
+    .dress-code{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        height: 230px;
+        width: 250px;
+        opacity: 70%;
+    }
+    
+    .dress-code h3{
+        font-family: 'Bigtime Personal Use';
+        font-size: 35px;
+        color: #000;
+    }
+    
+    .dress-code h4{
+        margin-top: 20px;
+        font-size: 35px;
+        color: #000;
+    }
+
+    .hashtag{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        height: 370px;
+        width: 250px;
+        opacity: 70%;
+    }
+
+    .hashtag-instagram h4{
+        font-size: 30px;
+        color: #000;
+        padding: 10px;
+    }
+
+    .hashtag img{
+        margin-bottom: 20px;
+    }
+
+    .regalo{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        height: 400px;
+        width: 250px;
+        opacity: 70%;
+    }
+    
+    .regalo h3{
+        font-family: 'Bigtime Personal Use';
+        font-size: 40px;
+        color: #000;
+    }
+    
+    .regalo h4{
+        font-size: 30px;
+        padding: 10px;
+        color: #000;
+    }
+    
+    .content-modal{
+        width: 90%;
+    }
+
+    .content-modal h2{
+        font-size: 35px;
+    }
+
+    .content-modal p{
+        font-size: 22px;
+        padding: 15px 0px;
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .container{
+        margin-top: 50px;
+    }
+
+    /* Polaroid */
+    .imagen{
+        border: 10px solid #fff;
+        border-bottom: 60px solid #fff;
+    }
+
+    .asistencia{
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        height: 320px;
+        width: 250px;
+        background-color: rgb(255, 255, 255);
+        opacity: 70%;
+    }
+    
+    .asistencia h3{
+        font-size: 40px;
+        color: #000;
+    }
+
+    .asistencia h4{
+        font-size: 35px;
+        padding: 5px;
+        color: #000;
+    }
+
+    .asistencia img{
+        height: 60px;
+        width: 60px;
+    }
+
+    .confirmacion{
+        margin-top: 10px;
+    }
+
+    .te-espero h2{
+        font-family: 'Bigtime Personal Use';
+        margin-top: 45px;
+        font-size: 35px;
+        text-align: center;
+        color: #000;
+    }
+
+}
